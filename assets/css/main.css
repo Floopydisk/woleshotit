@@ -845,6 +845,26 @@ section,
   bottom: 0;
 }
 
+.view-more {
+  display: block;
+  margin: 0 auto;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #0563bb;
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.view-more:hover {
+  border-color: #0563bb;
+  background-color: #fff;
+  color: #0563bb;
+}
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -1442,6 +1462,6 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
+.folio {
   /* Add your styles here */
 }
