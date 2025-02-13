@@ -5,7 +5,6 @@ Welcome to the Woleshotit Portfolio repository. This repository contains the por
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Projects](#projects)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -17,17 +16,11 @@ Welcome to the Woleshotit Portfolio repository. This repository contains the por
 
 This portfolio highlights the projects and achievements of Woleshotit. It serves as a comprehensive showcase of skills and expertise in various domains.
 
-## Projects
-
-1. **Project Name**: Description of the project.
-2. **Project Name**: Description of the project.
-3. **Project Name**: Description of the project.
-
 ## Technologies Used
 
-- Technology 1
-- Technology 2
-- Technology 3
+- HTML
+- Bootstrap CSS
+- Tiny bit of JavaScript
 
 ## Installation
 
@@ -41,18 +34,15 @@ To run the projects locally, follow these steps:
     ```sh
     cd woleshotit
     ```
-3. Install the necessary dependencies:
-    ```sh
-    npm install
-    ```
+3. Open index.html in browser
 
 ## Usage
 
-Provide instructions on how to use the projects in this repository.
+meh......just do whatever you wanna do with it
 
 ## Contributing
 
-Contributions are welcome! Please follow these steps to contribute:
+Contributions are not welcome! Please fork or clone the repository if you want to use it.
 
 1. Fork the repository.
 2. Create a new branch:
@@ -75,4 +65,4 @@ This repository is licensed under the MIT License. See the [LICENSE](LICENSE) fi
 
 ## Contact
 
-For any inquiries, please contact Woleshotit at [email@example.com](mailto:email@example.com).
+For any inquiries, please contact lore at [sibukunodunsi@gmail.com](mailto:Sibukunodunsi@gmail.com).
