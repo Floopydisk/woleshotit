@@ -80,12 +80,52 @@
     </section>
     <!-- /Starter Section Section -->
 
-    <section class="folio">
+     <section class="folio">
       <div class="projects"></div>
-        <?php include('src\render.php'); ?>
-      </div>
-      <!-- <button class="view-more">View More</button> -->
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const projectsDiv = document.querySelector('.projects');
+          const imageData = [
+            { 
+              src: 'assets/img/portfolio/image1.jpg',
+              title: 'Project 1',
+              category: 'Design'
+            },
+            { 
+              src: 'assets/img/portfolio/image2.jpg',
+              title: 'Project 2',
+              category: 'Development'
+            },
+            // Add more image objects as needed
+          ];
+
+          imageData.forEach(image => {
+            const figure = document.createElement('figure');
+            const img = document.createElement('img');
+            
+            // Set image attributes
+            img.src = image.src;
+            img.alt = image.title;
+            
+            // Maintain original aspect ratio and dimensions
+            img.style.maxWidth = '100%';
+            img.style.height = 'auto';
+            img.style.display = 'block';
+            
+            // Add caption if needed
+            const figcaption = document.createElement('figcaption');
+            figcaption.textContent = image.title;
+            
+            figure.appendChild(img);
+            figure.appendChild(figcaption);
+            projectsDiv.appendChild(figure);
+          });
+        });
+      </script>
     </section>
+
+  </main>
     
 
   </main>
