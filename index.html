@@ -781,8 +781,12 @@
                 </div>
           
                 <div class="col-md-6">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="email" placeholder="Your Email (optional)">
                 </div>
+          
+                <!-- <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject (optional)">
+                </div> -->
           
                 <div class="col-md-12">
                   <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
@@ -800,15 +804,23 @@
             event.preventDefault();
             
             // Replace with your WhatsApp number in international format (remove +)
-            const phoneNumber = '2348069168977';
+            const phoneNumber = '2349067944326';
             
             // Get form values
             const name = document.querySelector('[name="name"]').value;
             const email = document.querySelector('[name="email"]').value;
+            // const subject = document.querySelector('[name="subject"]').value;
             const message = document.querySelector('[name="message"]').value;
           
-            // Create formatted message
-            const fullMessage = `Hi Wole, I'm ${name}%0A${message}%0AYou can send me a mail at ${email}`;
+            // Start with required fields
+            let fullMessage = `Hi Wole, my name is *${encodeURIComponent(name)}*`;
+            
+            // Add optional fields only if they have values
+            if (email) fullMessage += `%0AEmail: ${encodeURIComponent(email)}`;
+            // if (subject) fullMessage += `%0ASubject: ${encodeURIComponent(subject)}`;
+            
+            // Add required message
+            fullMessage += `%0A${encodeURIComponent(message)}`;
           
             // Generate WhatsApp link
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
