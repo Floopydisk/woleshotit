@@ -849,10 +849,10 @@ section,
   display: block;
   margin: 0 auto;
   outline: none;
-  padding: 8px 16px;
-  border-radius: 24px;
-  font-size: 25px;
-  font-weight: 400;
+  padding: 15px 16px;
+  border-radius: 50px;
+  font-size: 19px;
+  font-weight: 300;
   background: #0563bb;
   color: #fff;
   border: 2px solid transparent;
