@@ -151,7 +151,7 @@
           <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
             <i class="bi bi-journal-richtext"></i>
             <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="94" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-enzd="94" data-purecounter-duration="1" class="purecounter"></span>
               <p>Projects</p>
             </div>
           </div><!-- End Stats Item -->
@@ -773,36 +773,56 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form onsubmit="sendToWhatsApp(event)" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
-
+          
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                 </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+          
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                 </div>
-
+          
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
                 </div>
-
+          
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
                 </div>
-
+          
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
+                  <button type="submit">Send via WhatsApp</button>
                 </div>
-
               </div>
             </form>
-          </div><!-- End Contact Form -->
+          </div>
+          
+          <script>
+          function sendToWhatsApp(event) {
+            event.preventDefault();
+            
+            // Replace with your WhatsApp number in international format (remove +)
+            const phoneNumber = '2348069168977';
+            
+            // Get form values
+            const name = document.querySelector('[name="name"]').value;
+            const email = document.querySelector('[name="email"]').value;
+            const subject = document.querySelector('[name="subject"]').value;
+            const message = document.querySelector('[name="message"]').value;
+          
+            // Create formatted message
+            const fullMessage = `Name: ${name}%0AEmail: ${email}%0ASubject: ${subject}%0AMessage: ${message}`;
+          
+            // Generate WhatsApp link
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
+          
+            // Open link in new tab
+            window.open(whatsappUrl, '_blank');
+          }
+          </script>
+          <!-- End Contact Form -->
 
         </div>
 
