@@ -804,7 +804,7 @@
             event.preventDefault();
             
             // Replace with your WhatsApp number in international format (remove +)
-            const phoneNumber = '2349067944326';
+            const phoneNumber = '2348069168977';
             
             // Get form values
             const name = document.querySelector('[name="name"]').value;
@@ -813,14 +813,14 @@
             const message = document.querySelector('[name="message"]').value;
           
             // Start with required fields
-            let fullMessage = `Hi Wole, my name is *${encodeURIComponent(name)}*`;
-            
-            // Add optional fields only if they have values
-            if (email) fullMessage += `%0AEmail: ${encodeURIComponent(email)}`;
-            // if (subject) fullMessage += `%0ASubject: ${encodeURIComponent(subject)}`;
+            let fullMessage = `Hi Wole, my name is *${encodeURIComponent(name)}*.`;
             
             // Add required message
             fullMessage += `%0A${encodeURIComponent(message)}`;
+
+            // Add optional fields only if they have values
+            if (email) fullMessage += `%0AEmail: ${encodeURIComponent(email)}`;
+            // if (subject) fullMessage += `%0ASubject: ${encodeURIComponent(subject)}`;
           
             // Generate WhatsApp link
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
