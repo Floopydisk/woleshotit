@@ -785,10 +785,6 @@
                 </div>
           
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                </div>
-          
-                <div class="col-md-12">
                   <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
                 </div>
           
@@ -809,11 +805,10 @@
             // Get form values
             const name = document.querySelector('[name="name"]').value;
             const email = document.querySelector('[name="email"]').value;
-            const subject = document.querySelector('[name="subject"]').value;
             const message = document.querySelector('[name="message"]').value;
           
             // Create formatted message
-            const fullMessage = `Name: ${name}%0AEmail: ${email}%0ASubject: ${subject}%0AMessage: ${message}`;
+            const fullMessage = `Hi Wole, I'm ${name}%0A${message}%0AYou can send me a mail at ${email}`;
           
             // Generate WhatsApp link
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
